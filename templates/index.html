@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AfyaQueue</title>
+</head>
+
+<body>
+    <h1>AfyaQueue - Patient Input</h1>
+    <form method="POST">
+        <label>Describe your symptoms:</label><br>
+        <textarea name="symptoms" required></textarea><br><br>
+        <label>Phone number (for SMS alert):</label><br>
+        <input type="text" name="phone" placeholder="+2567XXXXXXXX"><br><br>
+        <input type="checkbox" name="consent" required>
+        <label>I consent to my symptoms and phone number being used for triage and notifications.</label><br><br>
+        <button type="submit">Submit</button>
+    </form>
+    {% if alert_msg %}
+    <h2>Alert</h2>
+    <p>{{ alert_msg }}</p>
+    {% endif %}
+</body>
+
+</html>

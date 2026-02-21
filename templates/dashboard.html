@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AfyaQueue Dashboard</title>
+</head>
+
+<body>
+    <h1>Facility Dashboard</h1>
+    <p>Current Queue Length: {{ queue|length }}</p>
+    <p>Predicted Waiting Time: {{ predicted_wait }} minutes</p>
+
+    <h2>Queue Details</h2>
+    <ul>
+        {% for patient in queue %}
+        <li>{{ patient.name }} - {{ patient.urgency }}</li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
